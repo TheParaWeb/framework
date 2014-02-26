@@ -1,0 +1,77 @@
+* {
+    color: #4c4d4e;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    position: static;
+}
+
+/*---Admin---*/
+.new-category{
+    background: #f3f3f3;
+    display:none;
+}
+aside.warning{
+    display:block;
+    margin:5px 0px;
+    padding:10px;
+    background:#f72549;
+    color:#ffffff;
+    font-size:1.2em;
+}
+span.warning{
+    color:#ffffff;
+    font-size:1.4em;
+    font-weight:bold;
+}
+table.scrollable tbody { height:200px; overflow-y:scroll; display:block; }
+table.scrollable thead { display:block;}
+caption.note{text-align:right;}
+
+/*---Helpers---*/
+.clearFloat{clear:both;}
+
+
+
+/*---Media Queries---*/
+@media only screen and (max-width: 758px) {
+    body.home, body.profile, body.quiz {
+        background: #f9f9f9;
+    }
+
+    .educational-path {
+        margin: 15px 0;
+    }
+
+    .educational-path h2 {
+        vertical-align: top;
+    }
+
+    .share label, .question label {
+        font-size: 1em;
+    }
+
+    .answer label {
+        font-size: 0.95em;
+    }
+
+    span.detail {
+        font-size: 0.825em;
+        line-height: 1.2em;
+    }
+
+    .question input[type="radio"], .question input[type="checkbox"], .share input[type="checkbox"] {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 933px) {
+    .badges h5 {
+        display: block;
+    }
+}

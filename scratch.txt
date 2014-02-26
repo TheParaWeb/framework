@@ -1,0 +1,795 @@
+    function addSchools()
+    {
+
+        $schoolDistricts = array(
+            'Abbeville 60' => array(
+                'Abbeville High',
+                'Dixie High'
+            ),
+            'Aiken 01' => array(
+                'Aiken High',
+                'Midland Valley High',
+                'North Augusta High',
+                'Ridge Spring Monetta High',
+                'Silver Bluff High',
+                'South Aiken High',
+                'Wagener-Salley High'
+            ),
+            'Allendale 01' => array(
+                'Allendale Fairfax High'
+            ),
+            'Anderson 01' => array(
+                'Palmetto High',
+                'Powdersville High',
+                'Wren High'
+            ),
+            'Anderson 02' => array(
+                'Belton Honea Path High'
+            ),
+            'Anderson 03' => array(
+                'Crescent High'
+            ),
+            'Anderson 04' => array(
+                'Pendleton High'
+            ),
+            'Anderson 05' => array(
+                'T. L. Hanna High, an International Baccalaureate School',
+                'Westside High, an Early College Academy'
+            ),
+            'Bamberg 01' => array(
+                'Bamberg-Ehrhardt High'
+            ),
+            'Bamberg 02' => array(
+                'Denmark Olar High'
+            ),
+            'Barnwell 19' => array(
+                'Blackville-Hilda High'
+            ),
+            'Barnwell 29' => array(
+                'Williston-Elko High'
+            ),
+            'Barnwell 45' => array(
+                'Barnwell High'
+            ),
+            'Beaufort 01' => array(
+                'Battery Creek High',
+                'Beaufort High',
+                'Bluffton High',
+                'Hilton Head Island High',
+                'Whale Branch Early College High'
+            ),
+            'Berkeley 01' => array(
+                'Berkeley County Middle College High',
+                'Berkeley High',
+                'Cane Bay High',
+                'Cross High',
+                'Goose Creek High',
+                'Hanahan High',
+                'Stratford High',
+                'Timberland High'
+            ),
+            'Calhoun 01' => array(
+                'Calhoun County High'
+            ),
+            'Charleston 01' => array(
+                'Academic Magnet High',
+                'Baptist Hill High',
+                'Burke High',
+                'Charleston School of the Arts',
+                'Garrett Academy of Technology',
+                'Gregg Mathis Charter High (Youthbuild)',
+                'James Island Charter High',
+                'Lincoln High',
+                'Military Magnet Academy',
+                'North Charleston High',
+                'Pattison&rsquo;s Academy for Comprehensive Education',
+                'R. B. Stall High',
+                'St. Johns High',
+                'Wando High',
+                'West Ashley High'
+            ),
+            'Cherokee 01' => array(
+                'Blacksburg High',
+                'Cherokee Technology Center',
+                'Gaffney High'
+            ),
+            'Chester 01' => array(
+                'Chester County Career Center',
+                'Chester Senior High',
+                'Great Falls High',
+                'Lewisville High'
+            ),
+            'Chesterfield 01' => array(
+                'Central High',
+                'Cheraw High',
+                'Chesterfield High',
+                'McBee High'
+            ),
+            'Clarendon 01' => array(
+                'Scott$rsquo;s Branch High'
+            ),
+            'Clarendon 02' => array(
+                'Manning High',
+                'Phoenix Charter High'
+            ),
+            'Clarendon 03' => array(
+                'East Clarendon Middle-High'
+            ),
+            'Colleton 01' => array(
+                'Colleton County High',
+                'Thunderbolt Career and Technology Center'
+            ),
+            'Darlington 01' => array(
+                'Darlington County Institute Of Technology',
+                'Darlington High',
+                'Hartsville High',
+                'Lamar High'
+            ),
+            'Dillon 03' => array(
+                'Latta High'
+            ),
+            'Dillon 04' => array(
+                'Dillon High School',
+                'Lake View High'
+            ),
+            'Dorchester 02' => array(
+                'Ashley Ridge High',
+                'Fort Dorchester High',
+                'Summerville High'
+            ),
+            'Dorchester 04' => array(
+                'Woodland High'
+            ),
+            'Edgefield 01' => array(
+                'Strom Thurmond Career Center',
+                'Strom Thurmond High'
+            ),
+            'Fairfield 01' => array(
+                'Fairfield Career and Technology Center',
+                'Fairfield Central High'
+            ),
+            'Florence 01' => array(
+                'CHOiCES Charter School',
+                'Poynor Center',
+                'South Florence High',
+                'West Florence High',
+                'Wilson High'
+            ),
+            'Florence 02' => array(
+                'Hannah Pamplico High'
+            ),
+            'Florence 03' => array(
+                'Lake City High'
+            ),
+            'Florence 04' => array(
+                'Timmonsville High'
+            ),
+            'Florence 05' => array(
+                'Johnsonville High'
+            ),
+            'Georgetown 01' => array(
+                'Andrews High',
+                'Carvers Bay High',
+                'Georgetown High',
+                'Waccamaw High'
+            ),
+            'Greenville 01' => array(
+                'Berea High',
+                'Blue Ridge High',
+                'Brashier Middle College Charter',
+                'Carolina Academy',
+                'Donaldson Career Center',
+                'Enoree Career Center',
+                'Golden Strip Career and Technology Center',
+                'Greenville Senior High Academy',
+                'Greenville Technical Charter High',
+                'Greer High',
+                'Hillcrest High',
+                'J. Harley Bonds Career Center',
+                'J. L. Mann High Academy',
+                'Legacy Charter',
+                'Mauldin High',
+                'Riverside High',
+                'Southside High',
+                'Travelers Rest High',
+                'Wade Hampton High',
+                'Washington Center',
+                'Woodmont High'
+            ),
+            'Greenwood 50' => array(
+                'Emerald High',
+                'Greenwood High'
+            ),
+            'Greenwood 51' => array(
+                'Ware Shoals High'
+            ),
+            'Greenwood 52' => array(
+                'Ninety Six High'
+            ),
+            'Hampton 01' => array(
+                'Wade Hampton High'
+            ),
+            'Hampton 02' => array(
+                'Estill High'
+            ),
+            'Horry 01' => array(
+                'Academy For Arts Science Technology',
+                'Academy For Tech & Academics',
+                'Aynor High',
+                'Carolina Forest High',
+                'Conway High',
+                'Green Sea Floyds High',
+                'HCS Early College High',
+                'Loris High',
+                'Myrtle Beach High',
+                'North Myrtle Beach High',
+                'Palmetto Academy for Learning Motorsports',
+                'Socastee High',
+                'St. James High'
+            ),
+            'Jasper 01' => array(
+                'Ridgeland-Hardeeville High'
+            ),
+            'Kershaw 01' => array(
+                'Applied Technology Education Campus',
+                'Camden High',
+                'Lugoff-Elgin High',
+                'North Central High'
+            ),
+            'Lancaster 01' => array(
+                'Andrew Jackson High',
+                'Buford High',
+                'Indian Land High',
+                'Lancaster High'
+            ),
+            'Laurens 55' => array(
+                'Laurens District 55 High'
+            ),
+            'Laurens 56' => array(
+                'Clinton High'
+            ),
+            'Lee 01' => array(
+                'Lee Central High',
+                'Lee County Career and Technology Center'
+            ),
+            'Lexington 01' => array(
+                'Gilbert High',
+                'Lexington High',
+                'Lexington Technology Center',
+                'Pelion High',
+                'River Bluff High',
+                'White Knoll High'
+            ),
+            'Lexington 02' => array(
+                'Airport High',
+                'Brookland-Cayce Senior High'
+            ),
+            'Lexington 03' => array(
+                'Batesburg-Leesville High'
+            ),
+            'Lexington 04' => array(
+                'Swansea High',
+                'Swansea High Freshman Academy'
+            ),
+            'Lexington 05' => array(
+                'Center for Advanced Technical Studies',
+                'Chapin High',
+                'Dutch Fork High',
+                'Irmo High',
+                'Spring Hill High'
+            ),
+            'Marion 10' => array(
+                'Academy of Careers and Technology',
+                'Creek Bridge High',
+                'Marion High',
+                'Mullins High'
+            ),
+            'Marlboro 01 ' => array(
+                'Marlboro County High'
+            ),
+            'McCormick 01' => array(
+                'McCormick High'
+            ),
+            'Newberry 01' => array(
+                'Mid-Carolina High',
+                'Newberry County Career Center',
+                'Newberry High',
+                'Whitmire Community School (High)'
+            ),
+            'Oconee 01' => array(
+                'Fred P. Hamilton Career Center',
+                'Seneca High',
+                'Tamassee-Salem Middle-High',
+                'Walhalla High',
+                'West-Oak High'
+            ),
+            'Orangeburg 03' => array(
+                'Lake Marion High School and Technology Center'
+            ),
+            'Orangeburg 04' => array(
+                'Branchville High',
+                'Edisto High',
+                'Hunter-Kinard-Tyler High'
+            ),
+            'Orangeburg 05' => array(
+                'Bethune-Bowman Middle-High',
+                'North Middle-High',
+                'OCSD5 High School for Health Professions',
+                'Orangeburg Consolitated School District Five Technology Center',
+                'Orangeburg Wilkinson High'
+            ),
+            'Pickens 01' => array(
+                'D. W. Daniel High',
+                'Easley High',
+                'Liberty High',
+                'Pickens County Career and Technolgy Center',
+                'Pickens High'
+            ),
+            'Richland 01' => array(
+                'A. C. Flora High',
+                'C. A. Johnson High',
+                'Columbia High',
+                'Dreher High',
+                'Eau Claire High',
+                'Hall Institute',
+                'Lower Richland High',
+                'Pendergrass Fairwold School',
+                'Richland One Charter Middle College',
+                'Samuel A. Heyward Career and Tech Center',
+                'W.J. Keenan High'
+            ),
+            'Richland 02' => array(
+                'Blythewood High',
+                'Richland Northeast High',
+                'Richland Two Charter High',
+                'Ridge View High',
+                'Spring Valley High',
+                'Westwood High'
+            ),
+            'Saluda 01' => array(
+                'Saluda High'
+            ),
+            'Spartanburg 01' => array(
+                'Chapman High',
+                'Landrum High'
+            ),
+            'Spartanburg 02' => array(
+                'Boiling Springs High',
+                'Boiling Springs High Ninth Grade Campus',
+                'Chesnee High'
+            ),
+            'Spartanburg 03' => array(
+                'Gettys D. Broome High'
+            ),
+            'Spartanburg 04' => array(
+                'Woodruff High'
+            ),
+            'Spartanburg 05' => array(
+                'James Byrnes Freshman Academy',
+                'James F. Byrnes High'
+            ),
+            'Spartanburg 06' => array(
+                'Dorman High',
+                'Dorman High Freshman Campus'
+            ),
+            'Spartanburg 07' => array(
+                'Spartanburg Freshman Academy',
+                'Spartanburg High'
+            ),
+            'Sumter 01' => array(
+                'Crestwood High',
+                'Lakewood High',
+                'Sumter County Career Center',
+                'Sumter High'
+            ),
+            'Union 01' => array(
+                'Union County Career and Technology Center',
+                'Union County High'
+            ),
+            'Williamsburg 01' => array(
+                'C.E. Murray High',
+                'Hemingway Career and Technology Center',
+                'Hemingway High',
+                'Kingstree High',
+                'Youth Academy Charter'
+            ),
+            'York 01' => array(
+                'Floyd D. Johnson Technology Center',
+                'York Comprehensive High'
+            ),
+            'York 02' => array(
+                'Clover High'
+            ),
+            'York 03' => array(
+                'Applied Technology Center',
+                'Northwestern High',
+                'Rock Hill High',
+                'South Pointe High'
+            ),
+            'York 04' => array(
+                'Fort Mill High',
+                'Nation Ford High'
+            ),
+        );
+
+        $this->model->addSchools($schoolDistricts);
+    }
+
+
+$questions = array(
+    'Rise and shine. What type of home do you wake up in?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'Own 2 Bedroom Apartment/Townhome'=>array(
+                'price'=>10403,
+                'detail'=>'(Includes mortgage, taxes, insurance, and utilities.)'
+            ),
+            'Own 5+ bedroom mansion'=>array(
+                'price'=>31407,
+                'detail'=>'(Includes mortgage, taxes, insurance, and utilities.)'
+            ),
+            'Own 4 Bedroom Home'=>array(
+                'price'=>12961,
+                'detail'=>'(Includes mortgage, taxes, insurance, and utilities.)'
+            ),
+            'Own 3 Bedroom Home'=>array(
+                'price'=>11007,
+                'detail'=>'(Includes mortgage, taxes, insurance, and utilities.)'
+            ),
+            'Rent Apartment/Home'=>array(
+                'price'=>9600,
+                'detail'=>'(Includes rent, renter’s insurance, water & electricity.)'
+            )
+        )
+    ),
+    'Time to pick out an outfit for work. Where do you buy most of your clothes?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'Big Box Store'=>array(
+                'price'=>25*2*52,
+                'detail'=>'(Includes stores like Target, Walmart, TJ Maxx.)'
+            ),
+            'Specialty Store'=>array(
+                'price'=>70*2*52,
+                'detail'=>'(Includes stores like Express, American Eagle, Urban Outfitters.)'
+            ),
+            'Department Store'=>array(
+                'price'=>50*2*52,
+                'detail'=>'(Includes stores like Belk, Dillard’s, JCPenney.)'
+            ),
+            'Thrift Store'=>array(
+                'price'=>10*2*52,
+                'detail'=>'(Includes stores like Goodwill, Plato’s Closet.)'
+            ),
+            'Luxury Store'=>array(
+                'price'=>150*2*52,
+                'detail'=>'(Includes stores like Anthropologie, Burberry, Lacoste.)'
+            )
+        )
+    ),
+    'How big will your family be?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            '0'=>array(
+                'price'=>0,
+                'detail'=>'(Just paying for yourself. No extra cost.)'
+            ),
+            '1'=>array(
+                'price'=>8775,
+                'detail'=>'(Covers costs for you and one other person.)'
+            ),
+            '2'=>array(
+                'price'=>17550,
+                'detail'=>'(Covers costs for you and two other people.)'
+            ),
+            '3'=>array(
+                'price'=>26325,
+                'detail'=>'(Covers costs for you and three other people.)'
+            ),
+            '4'=>array(
+                'price'=>35100,
+                'detail'=>'(Covers costs for you and four other people.)'
+            )
+        )
+    ),
+    'You’re almost ready for work. What personal items have you purchased for the finishing touches?'=>array(
+        'type'=>'multiple',
+        'answers'=>array(
+            'Basics'=>array(
+                'price'=>20*12,
+                'detail'=>'(Pay for basic needs i.e. shampoo, soap, toothpaste, shaving needs.)'
+            ),
+            'Hair and Skin Care'=>array(
+                'price'=>30*12,
+                'detail'=>'(Pays for additional hair products/care, skin care, and makeup.)'
+            ),
+            'Gym Membership'=>array(
+                'price'=>40*12,
+                'detail'=>'(Pays for an average gym membership.)'
+            ),
+            'Spas & Lavish Treatments'=>array(
+                'price'=>100*12,
+                'detail'=>'(Pay for visits to a spa for things like massage and facials.)'
+            ),
+            'Extras'=>array(
+                'price'=>60*12,
+                'detail'=>'(Pay for extra personal items like cologne.)'
+            )
+        )
+    ),
+    'Time for work. How far will you have to travel?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'answer'=>array(
+                'price'=>1.2*5*51,
+                'detail'=>'(Round trip at $3.04/gallon for an auto average of 25mpg.)'
+            ),
+            'answer'=>array(
+                'price'=>2.4*5*51,
+                'detail'=>'(Round trip at $3.04/gallon for an auto average of 25mpg.)'
+            ),
+            'answer'=>array(
+                'price'=>3.6*5*51,
+                'detail'=>'(Round trip at $3.04/gallon for an auto average of 25mpg.)'
+            ),
+            'answer'=>array(
+                'price'=>4.8*5*51,
+                'detail'=>'(Round trip at $3.04/gallon for an auto average of 25mpg.)'
+            ),
+            'answer'=>array(
+                'price'=>5*5*71,
+                'detail'=>'(Round trip at $3.04/gallon for an auto average of 25mpg.)'
+            )
+        )
+    ),
+    'How will you get to work, and most other places?'=>array(
+        'type'=>'commuteCost',
+        'answers'=>array(
+            'answer'=>array(
+                'Personal Car'=>.12,
+                'detail'=>'(Cost per mile.)'
+            ),
+            'Walk/Bike'=>array(
+                'price'=>0,
+                'detail'=>'(Cost per mile.)'
+            ),
+            'Public Bus'=>array(
+                'price'=>1.5,
+                'detail'=>'(Cost per mile.)'
+            ),
+            'Cab'=>array(
+                'price'=>2.78,
+                'detail'=>'(Cost per mile.)'
+            ),
+            'Carpool'=>array(
+                'price'=>.03,
+                'detail'=>'(Cost per mile.)'
+            )
+        )
+    ),
+    'Getting hungry? Where will you eat most of your meals?'=>array(        // Accurate? Includes all three meals per day? Only week days?
+        'type'=>'single',
+        'answers'=>array(
+            'At home/Bring lunch'=>array(
+                'price'=>5*5*50,
+                'detail'=>'(Most of your meals will be purchased from grocery store and prepared at home.)'
+            ),
+            'Fast Food'=>array(
+                'price'=>10*5*50,
+                'detail'=>'(Most meals will be purchased from places such as McDonalds, Chick-fil-A, & Subway.)'
+            ),
+            'Fine restaurant'=>array(
+                'price'=>30*5*50,
+                'detail'=>'(Most meals will be taken at places such as Ruth’s Chris, The Oak Table.)'
+            ),
+            'Casual sit-down restaurant'=>array(
+                'price'=>18*5*50,
+                'detail'=>'(Meals often eaten at restaurants like Panera Bread, Applebee’s & Wild Wing Café.)'
+            ),
+            'null'=>array(
+                'price'=>0,
+                'detail'=>'null'
+            )
+        )
+    ),
+    'Back at work, it’s time to request some time off. How will you spend your annual vacation?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'Traveling in Europe'=>array(
+                'price'=>4000,
+                'detail'=>'(Includes travel, accommodations, meals, and extra spending money.)'
+            ),
+            'Weekend at the Beach/Mountains'=>array(
+                'price'=>500,
+                'detail'=>'(Includes travel, accommodations, meals, and extra spending money.)'
+            ),
+            'Visiting relatives'=>array(
+                'price'=>150,
+                'detail'=>'(Includes travel and extra spending money.)'
+            ),
+            'Major US City'=>array(
+                'price'=>1300,
+                'detail'=>'(Includes travel, accommodations, meals, and extra spending money.)'
+            ),
+            'All-inclusive tropical resort'=>array(
+                'price'=>2000,
+                'detail'=>'(Includes travel, accommodations, and extra spending money.)'
+            )
+        )
+    ),
+    'It’s also Pay Day. How much of your paycheck will you put into savings?'=>array(
+        'type'=>'savings',
+        'savings'=>array(
+            '0%'=>array(
+                'price'=>0,
+                'detail'=>'(No money will be put into a savings account.)'
+            ),
+            '1%'=>array(
+                'price'=>.01,
+                'detail'=>'(1% of your paycheck after taxes will be put into a savings account.)'
+            ),
+            '3%'=>array(
+                'price'=>.03,
+                'detail'=>'(3% of your paycheck after taxes will be put into a savings account.)'
+            ),
+            '5%'=>array(
+                'price'=>.05,
+                'detail'=>'(5% of your paycheck after taxes will be put into a savings account.)'
+            ),
+            '10%'=>array(
+                'price'=>.1,
+                'detail'=>'(10% of your paycheck after taxes will be put into a savings account.)'
+            )
+        )
+    ),
+    'You’ve got to set a few personal appointments. What will be your primary personal phone?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'SmartPhone'=>array(
+                'price'=>110*12,
+                'detail'=>'(Includes iPhone, Galaxy S4 with data, calling, insurance and texting plan.)'
+            ),
+            'Simple Cell Phone'=>array(
+                'price'=>78.5*12,
+                'detail'=>'(Includes simple cell Phone with data, calling, insurance and texting plan.)'
+            ),
+            'No Phone'=>array(
+                'price'=>0,
+                'detail'=>''
+            ),
+            'Home Phone'=>array(
+                'price'=>24*12,
+                'detail'=>'(Includes local and long distance.)'
+            ),
+            'Home Phone and Mobile Phone'=>array(
+                'price'=>102.5*12,
+                'detail'=>'(Includes both home and simple cell phone plans.)'
+            )
+        )
+    ),
+    'Speaking of appointments, how will you pay for doctor related fees?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'Employer Health Insurance'=>array(
+                'price'=>85*12,
+                'detail'=>'(Includes premium for one person of average health under an employer based insurance program.)'
+            ),
+            'Private Health Insurance'=>array(
+                'price'=>211*12,
+                'detail'=>'(Includes premium average for the state of SC for individuals covered under a private health insurance plan.)'
+            ),
+            'National Health Insurance'=>array(
+                'price'=>243*12,
+                'detail'=>'(Includes premium for one person of average health under 49 under the Affordable Care Act healthcare plan.)'
+            ),
+            'No Insurance'=>array(
+                'price'=>150*4,
+                'detail'=>'(Includes out of pocket cost for 4 visits to the doctor without insurance. Does not include hospitalizations.)'
+            ),
+            'null'=>array(
+                'price'=>0,
+                'detail'=>'null'
+            )
+        )
+    ),
+    'Back home after a long day at work. Will you have a pet to tend to?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'Yes, Cat'=>array(
+                'price'=>600,
+                'detail'=>'(Includes food, treats, litter, medical care, and accessories.)'
+            ),
+            'Yes, Dog'=>array(
+                'price'=>1132,
+                'detail'=>'(Includes)'
+            ),
+            'Yes, Fish or Bird'=>array(
+                'price'=>180,
+                'detail'=>'(Includes)'
+            ),
+            'Yes, Small Mammal'=>array(
+                'price'=>620,
+                'detail'=>'(Includes)'
+            ),
+            'No Pets'=>array(
+                'price'=>0,
+                'detail'=>'(No additional costs.)'
+            )
+        )
+    ),
+    'You have plans to meet friends this evening. How do you usually spend time together?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'Grabbing Coffee'=>array(
+                'price'=>10*52,
+                'detail'=>'xXx'
+            ),
+            'Visiting their house'=>array(
+                'price'=>5*52,
+                'detail'=>'xXx'
+            ),
+            'Going to Concerts'=>array(
+                'price'=>75*52,
+                'detail'=>'xXx'
+            ),
+            'Visiting Amusement Parks'=>array(
+                'price'=>60*26,
+                'detail'=>'xXx'
+            ),
+            'Seeing a movie'=>array(
+                'price'=>20*52,
+                'detail'=>'xXx'
+            )
+        )
+    ),
+    'You’ll drive your new car to meet your friends. What is it?'=>array(
+        'type'=>'single',
+        'answers'=>array(
+            'Sports Car'=>array(
+                'price'=>32431,
+                'detail'=>'(financed, insurance, taxes, DMV costs)'
+            ),
+            'Pick-Up Truck'=>array(
+                'price'=>8552,
+                'detail'=>'(financed, insurance, taxes, DMV costs)'
+            ),
+            'Sedan'=>array(
+                'price'=>7805,
+                'detail'=>'(financed, insurance, taxes, DMV costs)'
+            ),
+            'SUV'=>array(
+                'price'=>10197,
+                'detail'=>'(financed, insurance, taxes, DMV costs)'
+            ),
+            'Luxury Car'=>array(
+                'price'=>13234,
+                'detail'=>'(financed, insurance, taxes, DMV costs)'
+            )
+        )
+    ),
+    'Finally back at home and can relax. Which of these services have you subscribed to?'=>array(
+        'type'=>'multiple',
+        'answers'=>array(
+            'TV Service'=>array(
+                'price'=>42*12,
+                'detail'=>''
+            ),
+            'Internet'=>array(
+                'price'=>75*12,
+                'detail'=>''
+            ),
+            'Security'=>array(
+                'price'=>60*12,
+                'detail'=>''
+            ),
+            'Yard Maintenance'=>array(
+                'price'=>160*12,
+                'detail'=>''
+            ),
+            'Home Phone'=>array(
+                'price'=>57*12,
+                'detail'=>''
+            )
+        )
+    )
+);
